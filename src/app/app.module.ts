@@ -7,11 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { RoomService } from './services/rooms.service';
+import { QuestionsService } from './services/questions.service';
+import { TeamtestComponent } from './teamtest/teamtest.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    TeamtestComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,7 @@ import { RoomService } from './services/rooms.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [RoomService],
+  providers: [RoomService, QuestionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
